@@ -1,205 +1,58 @@
-# 🎶🔁 RePlayce
+# Documentação do Projeto BDD: Favoritar Produtos
 
-RePlayce é um marketplace acadêmico criado no projeto de POO, voltado para entusiastas da música retrô. A plataforma conecta compradores e vendedores de discos de vinil, vitrolas, fitas K7, CDs e outros itens clássicos, promovendo não só a negociação, mas também o resgate da memória afetiva e da cultura musical de outras épocas.
+## 1. A História de Usuário (User Story)
 
----
+### Título
+Favoritar Produtos para Lista de Interesses
 
-## 🛠 Tecnologias
+### Narrativa
+> Como um comprador logado no Marketplace,
+> Quero favoritar produtos,
+> Para que eu possa criar uma lista de interesse e acessá-los mais tarde.
 
-- **Java** – programação orientada a objetos
-- **ReactJS** – desenvolvimento da interface do usuário
-- **Git & GitHub** – versionamento e colaboração
-- **MySQL** – banco de dados
+### Princípios INVEST
 
----
+* **Independent:** A funcionalidade de favoritar é autônoma e não depende diretamente de outras funções como carrinho de compras ou processo de checkout.
+* **Negotiable:** Detalhes da interface (como o ícone de coração, estrela, cor) podem ser discutidos e alterados sem afetar o core da funcionalidade.
+* **Valuable:** Agrega valor ao usuário, permitindo organização e facilitando futuras compras.
+* **Estimable:** O esforço pode ser razoavelmente estimado, pois envolve a adição de um botão/ícone e a lógica de persistência.
+* **Small:** O escopo inicial é limitado a adicionar/remover favoritos.
+* **Testable (BDD):** Facilmente testável usando BDD, como demonstrado a seguir.
 
-## ⚡ Destaques do Projeto
+### Princípios SMART
 
-- **Experiência retrô com toque moderno**: interface em React com lógica em Java.
-- **Promoção cultural**: fomenta a troca de itens musicais clássicos entre usuários.
-- **Visão acadêmica + prática**: une conceitos de orientação a objetos com aplicação web funcional.
+* **Specific:** Claramente define a ação (favoritar produtos).
+* **Measurable:** O sucesso pode ser medido pela capacidade de favoritar, desfavoritar e visualizar a lista de favoritos.
+* **Achievable:** É uma funcionalidade comum em e-commerce e totalmente viável.
+* **Relevant:** Ajuda na retenção de usuários e no engajamento com a plataforma.
+* **Time-bound:** Pode ser entregue dentro de um sprint, junto com o fluxo de navegação ou exibição de produtos.
 
----
+***
 
-## 👥 Equipe
+## 2. Os Cenários de Uso (Gherkin)
 
-- Albean Santiago
-- Deyvison Conrado
-- Janderson Ferreira
-- Joyce Cristine
-- Maria Aparecida
-- Pedro Rennil
-- Rhaldney Robert
+Com base na história e nas suas descrições, criei os cenários Gherkin. Para uma aplicação desktop Swing, é importante pensar nas interações do usuário com a interface gráfica.
 
----
+*(Nota: Os cenários Gherkin não foram fornecidos no texto original para esta seção)*
 
-# Entrega 1
+***
 
-## 📖 Histórias de Usuário
-- https://docs.google.com/document/d/1A_EGGrFaKnTY2AhksK1i-sNwver_hHrx7KRK2MCcN44/edit?usp=sharing
+## 3. Como Implementar o Teste para pelo menos um dos cenários?
 
-- https://codingthefuture.atlassian.net/jira/software/projects/REP/boards/34
+### Dependências no pom.xml:
 
-## 🖼 Protótipo Lo-Fi  
-- [https://www.figma.com/proto/P5g2d7nrqH8aSpSbrkW5IJ/Wireframe?node-id=1-2&t=n5UcUr9YYCP6OGC1-1](https://www.figma.com/design/P5g2d7nrqH8aSpSbrkW5IJ/Wireframe?node-id=0-1&t=SHbAJxGaMqE857nc-1)
+(Assegure que a propriedade `cucumber.version` esteja definida)
 
-## 🎥 Screencast 
-- [https://youtu.be/emA6fT1Qu-U](https://youtu.be/emA6fT1Qu-U?si=OPym2KeO_mV-7x0P)
-
----
-
-# Entrega 2
-
-## 🎥 Screencast
-
-- https://www.youtube.com/watch?v=bmpB8KRJCHE
-
-## 🪲 Print bug/issue tracker
-
-<img width="1634" height="314" alt="issue enhancement" src="https://github.com/user-attachments/assets/978c6ff3-8e30-405b-aca5-6603070a3760" />
-
-<img width="1889" height="428" alt="issue closed" src="https://github.com/user-attachments/assets/9836e31f-d17f-45b9-a4ec-c4b84cd76dd9" />
-
----
-
-# Entrega 3
-
-## 🎥 Screencast
-
-- [https://www.youtube.com/watch?v=j8IEIx_2ceE](https://www.youtube.com/watch?v=I7tHa94vazk)
-
-## 🪲 Print bug/issue tracker
-
-<img width="1575" height="800" alt="image" src="https://github.com/user-attachments/assets/06d50872-a895-47bc-8717-c98cfd46d6f7" />
-
-## 🤖 Testes automatizados
-
-- https://www.youtube.com/watch?v=XstOFRRUg1c
-
----
-
-# Entrega 4
-
-## 🎥 Screencast
-
-- https://www.youtube.com/watch?v=p17qVSruH7E
-
-## 🪲 Print bug/issue tracker
-
-<img width="991" height="464" alt="image" src="https://github.com/user-attachments/assets/297a6886-cec2-4396-b665-4a00dbf39a91" />
-<img width="1117" height="474" alt="image" src="https://github.com/user-attachments/assets/4b6c657d-f105-4b90-8e0c-1d373c95666e" />
-
-
-## 🤖 Testes automatizados
-
-- https://www.youtube.com/watch?v=Zk2WMyMcAsw
-
-## 📌 Documentação - Como montar o projeto
-
-**Sumário**
-- Visão rápida
-- Pré-requisitos
-- Clonar repositório
-- Como rodar (backend / frontend)
-- Resetar banco de dados
-
----
-
-**Visão rápida**
-Este repositório contém:
-
-- `backend/` — aplicação Java Spring Boot com banco H2 (file-based)
-- `frontend/` — aplicação React + Vite
-
----
-
-**Pré-requisitos**
-- Java JDK 17+ (recomendado 17 ou 21)
-- Node.js 18+ e `npm`
-- Git (opcional)
-- PowerShell (Windows) ou terminal Unix
-
----
-
-**Clonar repositório**
-
-```powershell
-git clone https://github.com/JanFerreira1/POO-Marketplace.git
-cd POO-Marketplace
-```
-
----
-
-**Rodar o backend (Spring Boot + H2)**
-
-1. Entre na pasta do backend:
-
-```powershell
-cd \POO-Marketplace\backend
-```
-
-2. (Opcional) Build e testes:
-
-```powershell
-.\mvnw clean package
-```
-
-3. Rodar a aplicação:
-
-```powershell
-.\mvnw spring-boot:run
-```
-
-Observações:
-
-- A aplicação roda na porta `8080` (configurado em `backend/src/main/resources/application.properties`).
-- Banco: H2 persistente em arquivo: `jdbc:h2:file:./data/replayce-db` (arquivo em `backend/data/replayce-db.mv.db`).
-- Console H2: `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:file:./data/replayce-db`, usuário `sa`, senha vazia).
-- Para resetar os dados do H2: pare o backend e remova a pasta `backend/data`.
-
----
-
-**Rodar o frontend (React + Vite)**
-
-1. Entre na pasta do frontend:
-
-```powershell
-cd \POO-Marketplace\frontend
-```
-
-2. Instalar dependências (na primeira vez):
-
-```powershell
-npm install
-```
-
-3. Rodar em modo desenvolvimento:
-
-```powershell
-npm run dev
-```
-
-Observações:
-
-- URL padrão do Vite: `http://localhost:5173`.
-
----
-
-**Resetar banco de dados**
-
-- Pare o backend e remova a pasta de dados:
-
-```powershell
-cd backend
-Remove-Item -Recurse -Force .\data
-```
-
----
-
-## 🗓️ **Etapas do Projeto**
-
-**Kickoff (26/08 a 29/08):** definição da ideia, equipe e repositório  
-**Entrega 01 (09/09):** histórias de usuário, protótipo Lo-Fi e screencast  
-**Entrega 02 (30/09):** 2 histórias implementadas e seu screencast, issue/bug tracker atualizado  
-**Entrega 03 (23/10):** 2 novas histórias implementadas, refatoração, testes automatizados e screencast, issue/bug tracker atualizado  
-**Entrega 04 (17/11):** 3 novas histórias implementadas, refatoração, testes e screencasts, issue/bug tracker atualizado, tutorial documentado
+```xml
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit-platform-engine</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-spring</artifactId>
+</dependency>
