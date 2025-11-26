@@ -36,6 +36,8 @@ as interações típicas de um usuário em uma aplicação desktop Swing.
 
 *(Conteúdo dos cenários em `favorite.feature`.)*
 
+<img width="1066" height="504" alt="Captura de tela 2025-11-26 183307" src="https://github.com/user-attachments/assets/0882b7dd-8a6a-4196-b4ee-bd7a54147ebb" />
+
 ------------------------------------------------------------------------
 
 # 3. Implementação de Teste (BDD)
