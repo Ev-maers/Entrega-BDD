@@ -1,6 +1,4 @@
-# História de Usuário -- Favoritar Produtos
-
-## 1. A História de Usuário (User Story)
+# 1. A História de Usuário (User Story)
 
 **Título:** Favoritar Produtos para Lista de Interesses
 
@@ -31,7 +29,7 @@ que eu possa criar uma lista de interesse e acessá-los mais tarde.
 
 ------------------------------------------------------------------------
 
-## 2. Cenários de Uso (Gherkin)
+# 2. Cenários de Uso (Gherkin)
 
 Os cenários Gherkin foram criados com base na história e levam em conta
 as interações típicas de um usuário em uma aplicação desktop Swing.
@@ -40,7 +38,7 @@ as interações típicas de um usuário em uma aplicação desktop Swing.
 
 ------------------------------------------------------------------------
 
-## 3. Implementação de Teste (BDD)
+# 3. Implementação de Teste (BDD)
 
 ### Dependências no `pom.xml`
 
@@ -83,7 +81,7 @@ mvn -DskipTests=false test
 
 ------------------------------------------------------------------------
 
-## 4. Repositório do Projeto BDD
+# 4. Repositório do Projeto BDD
 
 Repositório: **https://github.com/Ev-maers/Entrega-BDD** (branch `main`)
 
