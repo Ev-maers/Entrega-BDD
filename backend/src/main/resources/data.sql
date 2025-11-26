@@ -154,7 +154,7 @@ VALUES (
     'Elis Regina & Tom Jobim', 
     1974, 
     245.00, 
-    '/img/012-elisettom-disco.jpg', 
+    '/img/012-elis-disco.jpg', 
     'disco', 
     'é um álbum clássico da MPB, gravado em 1974, que reúne a cantora Elis Regina e o compositor Tom Jobim. Ele foi gravado nos Estados Unidos e é considerado um dos maiores discos brasileiros, com sucessos como "Águas de Março", "Só Tinha De Ser Com Você" e "Soneto de Separação".', 
     'Usado (VG+)'
@@ -216,7 +216,7 @@ VALUES (
     'RePlayce', 
     2025, 
     65.00, 
-    '/img/005-plastico-acessorio.jpg',
+    '/img/005-plasticos-acessorio.jpg',
     'acessorio', 
     'Proteja seus LPs contra arranhões e poeira com plásticos internos de alta qualidade.', 
     'Novo'
@@ -228,7 +228,7 @@ VALUES (
     'Turntable Lab', 
     2024, 
     119.90, 
-    '/img/006-cortica-acessorio.jpg',
+    '/img/006-cortica-acessorio.webp',
     'acessorio', 
     'Melhora a aderência do disco e reduz a vibração e a estática. Feito de cortiça e borracha.', 
     'Novo'
