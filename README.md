@@ -68,6 +68,15 @@ as interações típicas de um usuário em uma aplicação desktop Swing.
 -   `CucumberSpringConfiguration` usa
     `@SpringBootTest(webEnvironment = RANDOM_PORT)` para habilitar
     `TestRestTemplate`.
+    
+<img width="870" height="132" alt="Captura de tela 2025-11-26 191359" src="https://github.com/user-attachments/assets/a2906dab-59ff-4721-8103-caaed56a2d19" />
+
+<img width="1022" height="189" alt="Captura de tela 2025-11-26 191513" src="https://github.com/user-attachments/assets/9e4376da-5311-4fe3-9dc5-b4e7d1a1e2d0" />
+
+<img width="1004" height="749" alt="Captura de tela 2025-11-26 192445" src="https://github.com/user-attachments/assets/6e8518cf-fef8-49fb-a2f5-2b143704777c" />
+
+<img width="1014" height="299" alt="Captura de tela 2025-11-26 192458" src="https://github.com/user-attachments/assets/b6f0e7b0-fe0a-4afb-9624-f9fbbcea840e" />
+
 
 ### Como rodar os testes
 
