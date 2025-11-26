@@ -1,58 +1,96 @@
-# Documentação do Projeto BDD: Favoritar Produtos
+# História de Usuário -- Favoritar Produtos
 
 ## 1. A História de Usuário (User Story)
 
-### Título
-Favoritar Produtos para Lista de Interesses
+**Título:** Favoritar Produtos para Lista de Interesses
 
-### Narrativa
-> Como um comprador logado no Marketplace,
-> Quero favoritar produtos,
-> Para que eu possa criar uma lista de interesse e acessá-los mais tarde.
+**Narrativa:**\
+Como um comprador logado no Marketplace, quero favoritar produtos, para
+que eu possa criar uma lista de interesse e acessá-los mais tarde.
 
 ### Princípios INVEST
 
-* **Independent:** A funcionalidade de favoritar é autônoma e não depende diretamente de outras funções como carrinho de compras ou processo de checkout.
-* **Negotiable:** Detalhes da interface (como o ícone de coração, estrela, cor) podem ser discutidos e alterados sem afetar o core da funcionalidade.
-* **Valuable:** Agrega valor ao usuário, permitindo organização e facilitando futuras compras.
-* **Estimable:** O esforço pode ser razoavelmente estimado, pois envolve a adição de um botão/ícone e a lógica de persistência.
-* **Small:** O escopo inicial é limitado a adicionar/remover favoritos.
-* **Testable (BDD):** Facilmente testável usando BDD, como demonstrado a seguir.
+-   **Independent:** A funcionalidade de favoritar é autônoma e não
+    depende diretamente de outras funções como carrinho ou checkout.\
+-   **Negotiable:** Detalhes da interface podem ser alterados sem afetar
+    a funcionalidade principal.\
+-   **Valuable:** Permite organização e facilita compras futuras.\
+-   **Estimable:** Esforço estimável --- envolve adicionar botão/ícone e
+    persistência.\
+-   **Small:** Escopo inicial limitado a adicionar/remover favoritos.\
+-   **Testable:** Fácil de testar com BDD.
 
 ### Princípios SMART
 
-* **Specific:** Claramente define a ação (favoritar produtos).
-* **Measurable:** O sucesso pode ser medido pela capacidade de favoritar, desfavoritar e visualizar a lista de favoritos.
-* **Achievable:** É uma funcionalidade comum em e-commerce e totalmente viável.
-* **Relevant:** Ajuda na retenção de usuários e no engajamento com a plataforma.
-* **Time-bound:** Pode ser entregue dentro de um sprint, junto com o fluxo de navegação ou exibição de produtos.
+-   **Specific:** Define claramente a ação de favoritar.\
+-   **Measurable:** Medido pela capacidade de favoritar, desfavoritar e
+    visualizar.\
+-   **Achievable:** Funcionalidade comum e viável.\
+-   **Relevant:** Aumenta retenção e engajamento.\
+-   **Time-bound:** Pode ser entregue em um sprint.
 
-***
+------------------------------------------------------------------------
 
-## 2. Os Cenários de Uso (Gherkin)
+## 2. Cenários de Uso (Gherkin)
 
-Com base na história e nas suas descrições, criei os cenários Gherkin. Para uma aplicação desktop Swing, é importante pensar nas interações do usuário com a interface gráfica.
+Os cenários Gherkin foram criados com base na história e levam em conta
+as interações típicas de um usuário em uma aplicação desktop Swing.
 
-*(Nota: Os cenários Gherkin não foram fornecidos no texto original para esta seção)*
+*(Conteúdo dos cenários em `favorite.feature`.)*
 
-***
+------------------------------------------------------------------------
 
-## 3. Como Implementar o Teste para pelo menos um dos cenários?
+## 3. Implementação de Teste (BDD)
 
-### Dependências no pom.xml:
+### Dependências no `pom.xml`
 
-(Assegure que a propriedade `cucumber.version` esteja definida)
+-   `io.cucumber:cucumber-java`
+-   `io.cucumber:cucumber-junit-platform-engine`
+-   `io.cucumber:cucumber-spring`
 
-```xml
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-</dependency>
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-junit-platform-engine</artifactId>
-</dependency>
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-spring</artifactId>
-</dependency>
+### Arquivos adicionados
+
+-   `favorite.feature` --- cenários Gherkin\
+-   `CucumberSpringConfiguration.java` --- ativa contexto SpringBoot\
+-   `RunCucumberTest.java` --- runner do JUnit Platform\
+-   `FavoriteSteps.java` --- step definitions
+
+### Fluxo do cenário "Adicionar produto aos favoritos"
+
+-   **Background:** garante que existe produto (via `data.sql`).\
+-   **Quando:** faz POST para `/api/favorites`.\
+-   **Então:** faz GET em `/api/favorites?username=alice` e verifica
+    presença do produto.
+
+### Pontos importantes
+
+-   Runner usa glue `com.replayce.backend.bdd`.\
+-   `CucumberSpringConfiguration` usa
+    `@SpringBootTest(webEnvironment = RANDOM_PORT)` para habilitar
+    `TestRestTemplate`.
+
+### Como rodar os testes
+
+``` bash
+mvn test
+```
+
+Para saída mais verbosa:
+
+``` bash
+mvn -DskipTests=false test
+```
+
+------------------------------------------------------------------------
+
+## 4. Repositório do Projeto BDD
+
+Repositório: **https://github.com/Ev-maers/Entrega-BDD** (branch `main`)
+
+### Arquivos adicionados/alterados
+
+-   `pom.xml`
+-   `favorite.feature`
+-   `CucumberSpringConfiguration.java`
+-   `RunCucumberTest.java`
+-   `FavoriteSteps.java`
